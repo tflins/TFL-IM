@@ -1,7 +1,7 @@
 <template>
   <div class="vchat-appCenter">
-    <weather></weather>
     <backLog></backLog>
+    <weather></weather>
   </div>
 </template>
 
