@@ -168,6 +168,15 @@ export default new Router({
                 title: '推箱子',
                 name: 'txz'
               }
+            },
+            {
+              path: 'snakeSub',
+              name: 'snake',
+              component: _import('applicationModel/games/Snake/Snake'),
+              meta: {
+                title: '贪吃蛇',
+                name: 'snake'
+              }
             }
           ]
         }
