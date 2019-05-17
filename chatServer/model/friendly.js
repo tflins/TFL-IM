@@ -111,8 +111,17 @@ const addFriend = (params, callback) => {
   })
 }
 
+// 删除好友 2019年5月 待完善
+const removeFriend = (params, callback) => {
+  let pr = { userM: params.userY, userY: params.userM };
+  friendly.remove(pr).then(r => {
+    console.log(r)
+  });
+}
+
 module.exports = {
   findMyfriends,
   checkMyfriends,
-  addFriend
+  addFriend,
+  removeFriend
 }

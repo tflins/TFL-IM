@@ -1,7 +1,7 @@
 <template>
   <div class="vchat-Detail">
     <v-apheader back="-1" bgcolor="transparent" class="vchat-Detail-header">
-      <v-icon name="erweima" color="#f5f5f5" cursor="pointer" @clickIcon="showFriendQr = true"></v-icon>
+      <!-- <v-icon name="erweima" color="#f5f5f5" cursor="pointer" @clickIcon="showFriendQr = true"></v-icon> -->
     </v-apheader>
     <el-carousel
       trigger="click"
@@ -38,7 +38,7 @@
         <button @click="remove" class="vchat-full-button error" v-else>删除好友</button>
       </div>
     </div>
-    <div class="Qr-dialog" :class="{active: showFriendQr}">
+    <!-- <div class="Qr-dialog" :class="{active: showFriendQr}">
       <v-icon
         class="el-icon-circle-close-outline QrClose"
         @clickIcon="showFriendQr = false"
@@ -46,7 +46,7 @@
         :size="28"
         cursor="pointer"
       ></v-icon>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -84,7 +84,25 @@ export default {
       });
     },
     remove() {
-      alert('ddd');
+      this.$confirm("确定删除该好友?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          this.$message({
+            type: "success",
+            message: "删除成功!"
+          });
+          console.log(this.friendInfo)
+          // this.$socket.emit("removeFriend", v);
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除"
+          });
+        });
     },
     getUserInfo() {
       let params = {

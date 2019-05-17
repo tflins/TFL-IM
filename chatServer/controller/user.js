@@ -1,4 +1,4 @@
-/*** Created by tflin on 2018/9/25.*/
+/*** Created by tflin on 2019/4/25.*/
 const apiModel = require('../model/apiModel')
 
 // 0成功 -1失败
@@ -109,7 +109,7 @@ const getUserInfo = (req, res) => {
 
 const getVchatInfo = (req, res) => {
   apiModel.getVchatInfo(r => {
-    // 获取vchat官方账号信息
+    // 获取tfl-im官方账号信息
     if (r.code === 0) {
       res.json({
         code: 0,

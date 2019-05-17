@@ -1,6 +1,6 @@
 <template>
   <div class="vchat-mine">
-    <vHeader :isMainHeader="false"></vHeader>努力开发中...
+    <vHeader :isMainHeader="false"></vHeader>待开发
   </div>
 </template>
 <script>

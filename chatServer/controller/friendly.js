@@ -29,6 +29,10 @@ const addFriend = (params, callback) => { // 验证是否已加为好友
     apiModel.addFriend(params, callback);
 };
 
+const removeFriend = (params, callback) => { // 验证是否已加为好友
+    apiModel.removeFriend(params, callback);
+};
+
 module.exports = {
     findMyfriends,
     checkMyfriends,
