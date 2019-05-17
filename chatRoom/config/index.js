@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/v': {
-            target: 'http://localhost:9988',
+            target: 'http://120.79.235.74:9988',
             changeOrigin: true // 是否在本机创建target地址的虚拟服务，避免跨域问题
         },
         '/api': {
@@ -26,7 +26,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '120.79.235.74', // can be overwritten by process.env.HOST
     port: 8899, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true,
     errorOverlay: true,
