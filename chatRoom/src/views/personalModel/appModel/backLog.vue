@@ -36,7 +36,7 @@
         </li>
       </ul>
       <v-nodata :url="bg" v-else>
-        <p class="vchat-no-have">暂无日程安排哟!</p>
+        <p class="vchat-no-have">暂无日程安排</p>
       </v-nodata>
     </div>
   </div>
