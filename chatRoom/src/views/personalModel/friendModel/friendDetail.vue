@@ -83,7 +83,9 @@ export default {
         query: {}
       });
     },
-    remove() {},
+    remove() {
+      alert('ddd');
+    },
     getUserInfo() {
       let params = {
         id: this.$route.params.id

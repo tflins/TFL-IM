@@ -13,10 +13,10 @@ export default {
   mounted() {
     document.addEventListener("visibilitychange", function() {
       if (document.visibilityState === "hidden") {
-        document.title = "咦，页面崩溃了";
+        document.title = "哇，你去哪啦";
         clearInterval(this.t);
       } else {
-        document.title = "哇，又好了";
+        document.title = "呀，回来啦";
         this.t = setTimeout(_ => {
           document.title = "TFL-IM";
         }, 2000);

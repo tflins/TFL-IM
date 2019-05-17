@@ -190,7 +190,7 @@ const getUserInfo = (params, callback) => {
 
 const getVchatInfo = callback => {
   // 获取vchat官方账号信息
-  baseList.users.find({ name: 'Vchat' }).then(r => {
+  baseList.users.find({ name: '谭丰林' }).then(r => {
     if (r.length) {
       callback({
         code: 0,

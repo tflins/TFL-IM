@@ -204,13 +204,13 @@ const onconnection = socket => {
       // 写入好友表
       apiList.addFriend(val, r => {
         if (r.code === 0) {
-          let pr = {
+          const pr = {
             status: '1',
             userM: val['userM']
           }
           apiList.setMessageStatus(pr)
           // 通知申请人验证已同意
-          let value = {
+          const value = {
             name: '',
             mes: val.userYname + '同意了你的好友请求！',
             time: utils.formatTime(new Date()),
@@ -223,14 +223,14 @@ const onconnection = socket => {
             roomid: val.userM + '-' + val.roomid.split('-')[1]
           }
           apiList.saveMessage(value) // 保存通知消息
-          let userMparams = {
+          const userMparams = {
             // 申请人信息
             name: val.nickname,
             photo: val.avatar,
             id: val.friendRoom,
             type: 'friend'
           }
-          let userYparams = {
+          const userYparams = {
             // 好友信息
             name: val.userYname,
             photo: val.userYphoto,
